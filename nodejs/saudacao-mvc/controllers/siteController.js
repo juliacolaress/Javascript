@@ -13,5 +13,15 @@ module.exports = {
     const { nome, idade, genero } = req.body;
     const mensagem = saudacaoModel.gerarMensagemPersonalizada(nome, idade, genero);
     res.send(`<h1>${mensagem}</h1>`);
-  }
+  },
+
+  produtos: (req, res) => {
+    res.sendFile('produtos.html', { root: './views' });
+  },
+
+  camisetas: (req, res) => {
+    res.sendFile('camisetas.html', { root: './views' });
+  },
+
+
 };
